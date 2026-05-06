@@ -16,6 +16,11 @@ class MyHomePage extends StatelessWidget {
           IconButton(onPressed: () {}, icon: Icon(Icons.person)),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.teal,
+        child: Icon(Icons.add, color: Colors.white),
+      ),
     );
   }
 }
