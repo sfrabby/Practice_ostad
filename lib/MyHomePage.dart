@@ -21,6 +21,17 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.teal,
         child: Icon(Icons.add, color: Colors.white),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.teal,
+          currentIndex: 0,
+          selectedItemColor: Colors.white,
+          items: [
+        BottomNavigationBarItem(icon: Icon(Icons.add)),
+        BottomNavigationBarItem(icon: Icon(Icons.add)),
+        BottomNavigationBarItem(icon: Icon(Icons.add)),
+
+
+      ]),
     );
   }
 }
