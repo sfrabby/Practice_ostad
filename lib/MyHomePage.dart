@@ -22,16 +22,44 @@ class MyHomePage extends StatelessWidget {
         child: Icon(Icons.add, color: Colors.white),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.teal,
-          currentIndex: 0,
-          selectedItemColor: Colors.white,
-          items: [
-        BottomNavigationBarItem(icon: Icon(Icons.add)),
-        BottomNavigationBarItem(icon: Icon(Icons.add)),
-        BottomNavigationBarItem(icon: Icon(Icons.add)),
+        backgroundColor: Colors.teal,
+        currentIndex: 0,
+        selectedItemColor: Colors.white,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.add), label: "Add"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "person"),
+          BottomNavigationBarItem(icon: Icon(Icons.edit), label: "Edit"),
+        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.teal),
+                accountName: Text("Fazle Rabby"),
+                accountEmail: Text("Fazle@gmail.com"),
+              ),
+            ),
 
-
-      ]),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("user"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("Setting"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.edit),
+              title: Text("Edit"),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
